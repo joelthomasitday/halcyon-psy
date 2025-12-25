@@ -10,15 +10,39 @@ export default function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1.5fr", gap: "48px", marginBottom: "80px" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "32px" }}>
-              <div style={{ width: "24px", height: "24px", borderRadius: "50%", backgroundColor: "var(--brand-accent)" }} />
-              <span style={{ 
-                fontSize: "1.25rem", 
-                fontWeight: 600, 
-                fontFamily: "var(--font-serif)",
-                letterSpacing: "0.05em"
-              }}>
-                WE CARE
-              </span>
+              <div style={{ width: "56px", height: "56px", position: "relative" }}>
+                 <img 
+                  src="/logo.png" 
+                  alt="We Care Logo" 
+                  style={{ 
+                    width: "100%", 
+                    height: "100%", 
+                    objectFit: "contain",
+                  }} 
+                />
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <span style={{ 
+                  fontSize: "1.25rem", 
+                  fontWeight: 600, 
+                  fontFamily: "var(--font-serif)",
+                  letterSpacing: "0.05em",
+                  color: "white",
+                  lineHeight: "1"
+                }}>
+                  We Care
+                </span>
+                <span style={{ 
+                  fontSize: "0.65rem", 
+                  fontWeight: 500, 
+                  color: "rgba(255, 255, 255, 0.8)",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.15em",
+                  marginTop: "4px"
+                }}>
+                  Psychological Services
+                </span>
+              </div>
             </div>
             <p style={{ opacity: 0.7, maxWidth: "340px", fontSize: "0.9rem", lineHeight: "1.8", marginBottom: "32px" }}>
               Intentional care for human connection. A safe and inclusive space offering therapy, counselling, and mental health support.

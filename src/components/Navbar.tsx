@@ -56,23 +56,41 @@ export default function Navbar() {
         }}
       >
         <Link href="/" style={{ textDecoration: "none", flex: "1 1 0%" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <div style={{ 
-              width: "32px", 
-              height: "32px", 
-              borderRadius: "50%", 
-              backgroundColor: "var(--brand-primary)",
-              boxShadow: "0 2px 8px rgba(0, 61, 46, 0.2)"
-            }} />
-            <span style={{ 
-              fontSize: "1.15rem", 
-              fontWeight: 600, 
-              color: "var(--brand-primary)",
-              fontFamily: "var(--font-serif)",
-              letterSpacing: "0.1em"
-            }}>
-              WE CARE
-            </span>
+<div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <div style={{ width: "56px", height: "56px", position: "relative" }}>
+              <img 
+                src="/logo.png" 
+                alt="We Care Logo" 
+                style={{ 
+                  width: "100%", 
+                  height: "100%", 
+                  objectFit: "contain",
+                }} 
+              />
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <span style={{ 
+                fontSize: "1.2rem", 
+                fontWeight: 700, 
+                color: "var(--brand-primary)",
+                fontFamily: "var(--font-serif)",
+                letterSpacing: "-0.02em",
+                lineHeight: "1"
+              }}>
+                We Care
+              </span>
+              <span style={{ 
+                fontSize: "0.65rem", 
+                fontWeight: 500, 
+                color: "var(--brand-primary)",
+                textTransform: "uppercase",
+                letterSpacing: "0.15em",
+                opacity: 0.8,
+                marginTop: "2px"
+              }}>
+                Psychological Services
+              </span>
+            </div>
           </div>
         </Link>
 
