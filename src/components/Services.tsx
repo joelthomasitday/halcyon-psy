@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import DeafSupport from "./DeafSupport";
 
 const services = [
   {
@@ -125,6 +127,8 @@ export default function Services() {
             Our Specialized Services
           </motion.h2>
         </div>
+
+        <DeafSupport embedded={true} />
 
         <div className="services-grid">
           {services.map((service, index) => (
