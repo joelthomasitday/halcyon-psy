@@ -112,6 +112,151 @@ export default function InquirePage() {
         </div>
       </section>
 
+      {/* Founder Section */}
+      <section className="section-padding" style={{ backgroundColor: "#fcfaf7" }}>
+        <div className="container">
+          <div className="founder-grid" style={{ 
+            display: "grid", 
+            gridTemplateColumns: "1fr 1fr", 
+            gap: "80px", 
+            alignItems: "center" 
+          }}>
+            {/* Image */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              style={{ position: "relative" }}
+            >
+              <div style={{ 
+                aspectRatio: "3/4", 
+                borderRadius: "20px", 
+                overflow: "hidden", 
+                boxShadow: "0 20px 40px rgba(0, 61, 46, 0.08)" 
+              }}>
+                <img 
+                  src="/contact/portrait.jpg" 
+                  alt="Bayula George - Founder" 
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                />
+              </div>
+            </motion.div>
+
+            {/* Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h2 style={{ 
+                fontSize: "2.5rem", 
+                marginBottom: "8px", 
+                color: "var(--brand-primary)",
+                lineHeight: "1.2"
+              }}>
+                Meet Bayula George
+              </h2>
+              <p style={{ 
+                fontFamily: "var(--font-serif)",
+                fontSize: "1.25rem", 
+                color: "var(--brand-accent)", 
+                marginBottom: "32px",
+                fontStyle: "italic"
+              }}>
+                Founder | Psychologist | Behaviour Analyst
+              </p>
+
+              <div style={{ 
+                color: "var(--text-muted)", 
+                lineHeight: "1.8", 
+                fontSize: "1.05rem", 
+                display: "flex", 
+                flexDirection: "column", 
+                gap: "24px", 
+                marginBottom: "40px" 
+              }}>
+                <p>
+                  Bayula George is a dedicated mental health professional committed to creating safe, inclusive, and supportive spaces for individuals seeking emotional and psychological well-being.
+                </p>
+                <p>
+                  With a strong foundation in psychology and behavioural science, she works closely with individuals, families, and the Deaf community to provide compassionate, culturally sensitive care. Her approach blends empathy, evidence-based practices, and real-world understanding to help individuals feel heard, understood, and empowered.
+                </p>
+                <p>
+                  Bayula believes that mental health support should be accessible, respectful, and tailored to each person’s unique journey. Through her work at We Care, she aims to bridge gaps in mental health awareness and provide meaningful support for people from all walks of life.
+                </p>
+              </div>
+
+              {/* Contact Info */}
+              <div className="founder-contact" style={{ 
+                display: "flex", 
+                flexDirection: "column", 
+                gap: "16px",
+                marginBottom: "40px",
+                paddingLeft: "24px",
+                borderLeft: "2px solid var(--brand-accent)"
+              }}>
+                <div>
+                  <span style={{ 
+                    display: "block", 
+                    fontSize: "0.75rem", 
+                    textTransform: "uppercase", 
+                    letterSpacing: "0.1em",
+                    color: "var(--text-muted)",
+                    marginBottom: "4px"
+                  }}>Email</span>
+                  <a href="mailto:bayulageorge@gmail.com" style={{ 
+                    fontSize: "1.1rem", 
+                    color: "var(--brand-primary)", 
+                    textDecoration: "none", 
+                    fontWeight: 500 
+                  }}>bayulageorge@gmail.com</a>
+                </div>
+                <div>
+                  <span style={{ 
+                    display: "block", 
+                    fontSize: "0.75rem", 
+                    textTransform: "uppercase", 
+                    letterSpacing: "0.1em",
+                    color: "var(--text-muted)",
+                    marginBottom: "4px"
+                  }}>Phone</span>
+                  <a href="tel:+919946702704" style={{ 
+                    fontSize: "1.1rem", 
+                    color: "var(--brand-primary)", 
+                    textDecoration: "none", 
+                    fontWeight: 500 
+                  }}>+91 99467 02704</a>
+                </div>
+              </div>
+
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-connect"
+                style={{ 
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: "var(--brand-primary)", 
+                  color: "white", 
+                  padding: "16px 32px", 
+                  borderRadius: "100px", 
+                  fontWeight: 600, 
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                  boxShadow: "0 10px 20px rgba(0, 61, 46, 0.15)"
+                }}
+              >
+                Connect with Bayula
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Other Ways to Connect */}
       <section className="section-padding" style={{ backgroundColor: "white" }}>
         <div className="container">
@@ -150,7 +295,20 @@ export default function InquirePage() {
           background-color: var(--brand-primary-light) !important;
         }
         
+        .btn-connect:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 14px 24px rgba(0, 61, 46, 0.2) !important;
+          background-color: var(--brand-primary-light) !important;
+        }
+
         @media (max-width: 992px) {
+          .founder-contact {
+            border-left: none !important;
+            padding-left: 0 !important;
+            align-items: center;
+            text-align: center;
+          }
+
           section > div > div {
             grid-template-columns: 1fr !important;
             gap: 60px;
