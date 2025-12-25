@@ -39,8 +39,8 @@ export default function Hero() {
           zIndex: 0
         }}>
           <img 
-            src="/assets/hero_couple.png" 
-            alt="Couples therapy session" 
+            src="/assets/hero_new.png" 
+            alt="Woman reaching out in a welcoming therapy space" 
             style={{ 
               width: "100%", 
               height: "100%", 

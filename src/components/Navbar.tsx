@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +57,7 @@ export default function Navbar() {
         }}
       >
         <Link href="/" style={{ textDecoration: "none", flex: "1 1 0%" }}>
-<div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "56px", height: "56px", position: "relative" }}>
               <img 
                 src="/logo.png" 
@@ -68,7 +69,7 @@ export default function Navbar() {
                 }} 
               />
             </div>
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            <div className="logo-text" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
               <span style={{ 
                 fontSize: "1.2rem", 
                 fontWeight: 700, 
@@ -94,7 +95,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden-mobile" style={{ 
+        <div className="desktop-menu" style={{ 
           display: "flex", 
           gap: "40px",
           flex: "2 1 0%",
@@ -119,7 +120,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div style={{ display: "flex", justifyContent: "flex-end", flex: "1 1 0%" }}>
+        <div className="desktop-cta" style={{ display: "flex", justifyContent: "flex-end", flex: "1 1 0%" }}>
           <Link href="/inquire" style={{ textDecoration: "none" }}>
             <button 
               className="btn" 
@@ -142,7 +143,99 @@ export default function Navbar() {
             </button>
           </Link>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{
+            display: "none",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            padding: "8px",
+            color: "var(--brand-primary)"
+          }}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            {mobileMenuOpen ? (
+              <path d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            )}
+          </svg>
+        </button>
       </motion.nav>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="mobile-menu"
+          style={{
+            position: "absolute",
+            top: "calc(100% + 16px)",
+            left: "40px",
+            right: "40px",
+            backgroundColor: "rgba(255, 255, 255, 0.95)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            borderRadius: "24px",
+            border: "1px solid rgba(0, 61, 46, 0.12)",
+            boxShadow: "0 20px 40px rgba(0, 30, 20, 0.12)",
+            padding: "24px",
+            display: "none",
+            flexDirection: "column",
+            gap: "20px"
+          }}
+        >
+          {["Services", "Approach", "Philosophy"].map((item) => (
+            <Link 
+              key={item} 
+              href={`/#${item.toLowerCase().replace(" ", "-")}`}
+              onClick={() => setMobileMenuOpen(false)}
+              style={{
+                fontSize: "0.72rem",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: "0.15em",
+                color: "var(--brand-primary)",
+                textDecoration: "none",
+                padding: "12px 0",
+                borderBottom: "1px solid rgba(0, 61, 46, 0.08)",
+                transition: "var(--transition-smooth)"
+              }}
+            >
+              {item}
+            </Link>
+          ))}
+          <Link href="/inquire" style={{ textDecoration: "none" }}>
+            <button 
+              className="btn" 
+              style={{ 
+                padding: "12px 28px", 
+                borderRadius: "100px",
+                fontSize: "0.7rem",
+                backgroundColor: "var(--brand-primary)",
+                color: "white",
+                border: "none",
+                textTransform: "uppercase",
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                boxShadow: "0 6px 16px rgba(0, 61, 46, 0.2)",
+                cursor: "pointer",
+                transition: "transform 0.3s ease, background-color 0.3s ease",
+                width: "100%",
+                marginTop: "8px"
+              }}
+            >
+              Inquire
+            </button>
+          </Link>
+        </motion.div>
+      )}
 
       <style jsx>{`
         .nav-link {
@@ -160,9 +253,33 @@ export default function Navbar() {
           background-color: var(--brand-primary-light) !important;
           box-shadow: 0 8px 20px rgba(0, 61, 46, 0.25) !important;
         }
+        
         @media (max-width: 768px) {
-          .hidden-mobile {
+          .desktop-menu,
+          .desktop-cta {
             display: none !important;
+          }
+          .mobile-menu-btn {
+            display: block !important;
+          }
+          .mobile-menu {
+            display: flex !important;
+          }
+          .logo-text span:first-child {
+            font-size: 1rem !important;
+          }
+          .logo-text span:last-child {
+            font-size: 0.55rem !important;
+          }
+          div[style*="width: 56px"] {
+            width: 40px !important;
+            height: 40px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .logo-text span:last-child {
+            display: none;
           }
         }
       `}</style>
