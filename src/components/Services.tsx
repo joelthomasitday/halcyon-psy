@@ -5,46 +5,88 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "Behavioural Support",
-    subtitle: "Specialized for Deaf Communities",
-    description: "Expert behavioral therapies specifically designed with cultural and linguistic sensitivity for the deaf and hard of hearing.",
+    title: "Professional Counselling",
+    subtitle: "Personalized Support",
+    description: "Personalized sessions addressing emotional, behavioral, and psychological concerns.",
     image: "/service-1.png",
     category: "Individuals"
   },
   {
-    title: "Developmental Care",
-    subtitle: "Autism & Disorders",
-    description: "Comprehensive support systems for individuals navigating autism and various developmental challenges with dignity and care.",
+    title: "Cognitive Behavioral Therapy (CBT)",
+    subtitle: "Evidence-Based",
+    description: "Structured therapy to identify and reshape unhelpful thoughts and behaviors.",
     image: "/service-2.png",
-    category: "Children"
+    category: "Therapy"
   },
   {
-    title: "Inclusive Therapy",
-    subtitle: "Deaf & Hearing Individuals",
-    description: "A bridged experience providing therapy sessions for both deaf and hearing individuals in a shared, accessible environment.",
+    title: "Family Therapy",
+    subtitle: "Relationship Wellness",
+    description: "Strengthening relationships and improving communication within families.",
     image: "/service-3.png",
-    category: "Couples"
+    category: "Families"
   },
   {
-    title: "Clinical Counseling",
-    subtitle: "Professional Guidance",
-    description: "One-on-one sessions focused on navigating life's complexities, emotional regulation, and personal resilience.",
+    title: "Group Therapy",
+    subtitle: "Collective Healing",
+    description: "Shared therapeutic environments for mutual learning and support.",
+    image: "/service-4.png",
+    category: "Groups"
+  },
+  {
+    title: "Home Counseling",
+    subtitle: "Accessible Care",
+    description: "Therapy delivered in the comfort of your home when required.",
+    image: "/service-5.png",
+    category: "At Home"
+  },
+  {
+    title: "Mindfulness Therapy",
+    subtitle: "Presence & Awareness",
+    description: "Developing awareness, regulation, and emotional balance.",
+    image: "/service-1.png",
+    category: "Wellness"
+  },
+  {
+    title: "Neurofeedback",
+    subtitle: "Brain-Based Training",
+    description: "Brain-based training to support emotional and cognitive regulation.",
+    image: "/service-2.png",
+    category: "Scientific"
+  },
+  {
+    title: "Online Counselling",
+    subtitle: "Virtual Care",
+    description: "Confidential therapy sessions conducted virtually.",
+    image: "/service-3.png",
+    category: "Digital"
+  },
+  {
+    title: "Psychotherapy",
+    subtitle: "In-depth Support",
+    description: "In-depth therapeutic support for long-term emotional wellbeing.",
     image: "/service-4.png",
     category: "Individuals"
   },
   {
-    title: "Psychotherapy",
-    subtitle: "Deep Mental Wellness",
-    description: "In-depth therapeutic processes to address complex psychological patterns and foster long-term mental health.",
+    title: "Psychometric Testing",
+    subtitle: "Scientific Assessment",
+    description: "Scientific assessments to understand cognitive and emotional functioning.",
     image: "/service-5.png",
-    category: "Geriatric"
+    category: "Assessment"
   },
   {
-    title: "Speech Therapy",
-    subtitle: "Communication Excellence",
-    description: "Professional interventions to enhance communication skills and support speech development for all ages.",
+    title: "RTMS Therapy",
+    subtitle: "Advanced Treatment",
+    description: "Advanced, non-invasive brain stimulation for treatment-resistant conditions.",
+    image: "/service-1.png",
+    category: "Advanced"
+  },
+  {
+    title: "School Wellness Programs",
+    subtitle: "Educational Support",
+    description: "Emotional and behavioral wellness programs designed for school environments.",
     image: "/service-2.png",
-    category: "Children"
+    category: "Schools"
   },
 ];
 

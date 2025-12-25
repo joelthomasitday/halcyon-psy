@@ -67,27 +67,16 @@ export default function Philosophy() {
           }}>
             Our Philosophy
           </span>
-          <h2 style={{ marginBottom: "32px" }}>A bridge to <br />human understanding.</h2>
+          <h2 style={{ marginBottom: "32px" }}>A Bridge to Human Understanding</h2>
           <p style={{ color: "var(--text-main)", fontWeight: 400, marginBottom: "24px", fontSize: "1.25rem" }}>
-            At Halcyon Psy, we believe that mental wellness is a fundamental human right, 
-            transcending the barriers of language and biology.
-          </p>
-          <p style={{ color: "var(--text-muted)", marginBottom: "24px" }}>
-            Our center is a pioneer in combining traditional psychological rigor with 
-            specialized linguistic expertise. We don't just "accommodate" the deaf community; 
-            we have built our entire practice around their unique cultural and neurological 
-            experiences. By integrating sign-language-fluent therapists and behaviorists, 
-            we ensure that nothing is lost in translation.
+            At Halcyon Psy, we believe mental wellness is deeply personal. Our approach blends evidence-based psychology with compassionate, human-centered care. 
           </p>
           <p style={{ color: "var(--text-muted)", marginBottom: "40px" }}>
-            For those with autism and developmental disorders, we offer more than just 
-            treatment; we offer a sanctuary of patience. Our therapy modules are human-made, 
-            individualized, and designed to honor the pace of the person, not the pressure 
-            of the diagnosis.
+            We support individuals across developmental stages, cultures, and abilities — creating a safe space where healing, growth, and understanding can begin.
           </p>
           
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            {["Human-Centered Ethics", "Linguistic Inclusion", "Clinical Excellence"].map((item, i) => (
+            {["Human-centered ethics", "Inclusive & accessible care", "Evidence-based practice"].map((item, i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <div style={{ width: "6px", height: "6px", backgroundColor: "var(--brand-accent)", borderRadius: "50%" }} />
                 <span style={{ fontSize: "0.875rem", fontWeight: 500, letterSpacing: "0.05em", color: "var(--brand-primary)" }}>{item}</span>

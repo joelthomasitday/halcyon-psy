@@ -100,13 +100,12 @@ export default function Hero() {
                 fontSize: "clamp(1rem, 2vw, 1.25rem)", 
                 color: "rgba(255, 255, 255, 0.85)", 
                 marginBottom: "40px",
-                maxWidth: "550px",
+                maxWidth: "650px",
                 fontWeight: 300,
                 lineHeight: "1.6"
               }}
             >
-              A calm haven for mental wellness, specializing in inclusive therapy 
-              and compassionate counseling for modern couples and individuals.
+              A safe and inclusive space offering therapy, counselling, and mental health support for individuals, couples, and families.
             </motion.p>
 
             <motion.div
@@ -124,7 +123,7 @@ export default function Hero() {
                   padding: "16px 32px"
                 }}
               >
-                Book Consultation
+                Book a Free 15-Minute Consultation
               </button>
               <button 
                 className="btn"
