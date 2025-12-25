@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+import Link from "next/link";
+
 export default function AppointmentCTA() {
   return (
     <section className="section-padding" style={{ backgroundColor: "var(--brand-primary)", color: "white" }}>
@@ -20,12 +22,20 @@ export default function AppointmentCTA() {
           </p>
           
           <div style={{ display: "flex", gap: "20px", justifyContent: "center", marginBottom: "40px" }}>
-            <button className="btn" style={{ backgroundColor: "var(--brand-accent)", color: "var(--brand-primary)", borderRadius: "100px", padding: "16px 32px" }}>
-              Book Free Consultation
-            </button>
-            <button className="btn" style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "white", borderRadius: "100px", padding: "16px 32px" }}>
-              Contact Us
-            </button>
+            <Link 
+              href="https://wa.me/919946702704?text=Hello%2C%20I%20would%20like%20to%20book%20a%20free%2015-minute%20assessment."
+              target="_blank"
+              style={{ textDecoration: 'none' }}
+            >
+              <button className="btn" style={{ backgroundColor: "var(--brand-accent)", color: "var(--brand-primary)", borderRadius: "100px", padding: "16px 32px", border: "none", cursor: "pointer" }}>
+                Book Free Consultation
+              </button>
+            </Link>
+            <Link href="/inquire" style={{ textDecoration: 'none' }}>
+              <button className="btn" style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "white", borderRadius: "100px", padding: "16px 32px", cursor: "pointer" }}>
+                Contact Us
+              </button>
+            </Link>
           </div>
 
           <div className="cta-mentions">
