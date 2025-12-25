@@ -69,7 +69,7 @@ export default function Philosophy() {
           </span>
           <h2 style={{ marginBottom: "32px" }}>A Bridge to Human Understanding</h2>
           <p style={{ color: "var(--text-main)", fontWeight: 400, marginBottom: "24px", fontSize: "1.25rem" }}>
-            At Halcyon Psy, we believe mental wellness is deeply personal. Our approach blends evidence-based psychology with compassionate, human-centered care. 
+            At We care, we believe mental wellness is deeply personal. Our approach blends evidence-based psychology with compassionate, human-centered care. 
           </p>
           <p style={{ color: "var(--text-muted)", marginBottom: "40px" }}>
             We support individuals across developmental stages, cultures, and abilities — creating a safe space where healing, growth, and understanding can begin.

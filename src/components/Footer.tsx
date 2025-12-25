@@ -17,7 +17,7 @@ export default function Footer() {
                 fontFamily: "var(--font-serif)",
                 letterSpacing: "0.05em"
               }}>
-                HALCYON PSY
+                WE CARE
               </span>
             </div>
             <p style={{ opacity: 0.7, maxWidth: "340px", fontSize: "0.9rem", lineHeight: "1.8", marginBottom: "32px" }}>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <p style={{ fontSize: "0.75rem", opacity: 0.5 }}>
-            © {new Date().getFullYear()} Halcyon Psy. All rights reserved.
+            © {new Date().getFullYear()} We care. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: "24px" }}>
             {["Privacy Policy", "Terms of Service", "Accessibility"].map(item => (

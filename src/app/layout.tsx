@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Halcyon Psy | Premium Therapy & Psychological Services",
+  title: "We care | Premium Therapy & Psychological Services",
   description: "Experience intentional, calm, and professional psychological care. Dedicated therapy for deaf individuals, autism, and developmental disorders.",
 };
 

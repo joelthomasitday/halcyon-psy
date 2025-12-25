@@ -71,7 +71,7 @@ export default function Navbar() {
               fontFamily: "var(--font-serif)",
               letterSpacing: "0.1em"
             }}>
-              HALCYON
+              WE CARE
             </span>
           </div>
         </Link>
