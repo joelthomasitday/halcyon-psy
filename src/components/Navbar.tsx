@@ -89,7 +89,7 @@ export default function Navbar() {
                 opacity: 0.8,
                 marginTop: "2px"
               }}>
-                Psychological Services
+                We care psychological services
               </span>
             </div>
           </div>
@@ -283,7 +283,9 @@ export default function Navbar() {
         
         @media (max-width: 480px) {
           .logo-text span:last-child {
-            display: none;
+            display: block;
+            font-size: 0.5rem !important;
+            letter-spacing: 0.1em !important;
           }
         }
       `}</style>
