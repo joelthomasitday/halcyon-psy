@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import DeafSupport from "@/components/DeafSupport";
 import Philosophy from "@/components/Philosophy";
 import PatientCare from "@/components/PatientCare";
 import SpecializedTherapies from "@/components/SpecializedTherapies";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Philosophy />
       <Services />
+      <DeafSupport />
       <PatientCare />
       <SpecializedTherapies />
       <AppointmentCTA />
