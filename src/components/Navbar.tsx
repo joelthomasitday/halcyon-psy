@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -168,74 +168,78 @@ export default function Navbar() {
       </motion.nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="mobile-menu"
-          style={{
-            position: "absolute",
-            top: "calc(100% + 16px)",
-            left: "40px",
-            right: "40px",
-            backgroundColor: "rgba(255, 255, 255, 0.95)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
-            borderRadius: "24px",
-            border: "1px solid rgba(0, 61, 46, 0.12)",
-            boxShadow: "0 20px 40px rgba(0, 30, 20, 0.12)",
-            padding: "24px",
-            display: "none",
-            flexDirection: "column",
-            gap: "20px"
-          }}
-        >
-          {["Services", "Approach", "Philosophy"].map((item) => (
-            <Link 
-              key={item} 
-              href={`/#${item.toLowerCase().replace(" ", "-")}`}
-              onClick={() => setMobileMenuOpen(false)}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
+              className="mobile-menu"
               style={{
-                fontSize: "0.72rem",
-                fontWeight: 700,
-                textTransform: "uppercase",
-                letterSpacing: "0.15em",
-                color: "var(--brand-primary)",
-                textDecoration: "none",
-                padding: "12px 0",
-                borderBottom: "1px solid rgba(0, 61, 46, 0.08)",
-                transition: "var(--transition-smooth)"
+                position: "absolute",
+                top: "calc(100% + 16px)",
+                left: "40px",
+                right: "40px",
+                backgroundColor: "rgba(255, 255, 255, 0.98)",
+                backdropFilter: "blur(24px)",
+                WebkitBackdropFilter: "blur(24px)",
+                borderRadius: "24px",
+                border: "1px solid rgba(0, 61, 46, 0.12)",
+                boxShadow: "0 24px 48px rgba(0, 30, 20, 0.16)",
+                padding: "24px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+                zIndex: 101
               }}
             >
-              {item}
-            </Link>
-          ))}
-          <Link href="/inquire" style={{ textDecoration: "none" }}>
-            <button 
-              className="btn" 
-              style={{ 
-                padding: "12px 28px", 
-                borderRadius: "100px",
-                fontSize: "0.7rem",
-                backgroundColor: "var(--brand-primary)",
-                color: "white",
-                border: "none",
-                textTransform: "uppercase",
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                boxShadow: "0 6px 16px rgba(0, 61, 46, 0.2)",
-                cursor: "pointer",
-                transition: "transform 0.3s ease, background-color 0.3s ease",
-                width: "100%",
-                marginTop: "8px"
-              }}
-            >
-              Inquire
-            </button>
-          </Link>
-        </motion.div>
-      )}
+              {["Services", "Approach", "Philosophy"].map((item) => (
+                <Link 
+                  key={item} 
+                  href={`/#${item.toLowerCase().replace(" ", "-")}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{
+                    fontSize: "0.85rem",
+                    fontWeight: 600,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
+                    color: "var(--brand-primary)",
+                    textDecoration: "none",
+                    padding: "16px 0",
+                    borderBottom: "1px solid rgba(0, 61, 46, 0.08)",
+                    transition: "var(--transition-smooth)",
+                    display: "block"
+                  }}
+                >
+                  {item}
+                </Link>
+              ))}
+              <Link href="/inquire" style={{ textDecoration: "none" }} onClick={() => setMobileMenuOpen(false)}>
+                <button 
+                  className="btn" 
+                  style={{ 
+                    padding: "16px 28px", 
+                    borderRadius: "100px",
+                    fontSize: "0.8rem",
+                    backgroundColor: "var(--brand-primary)",
+                    color: "white",
+                    border: "none",
+                    textTransform: "uppercase",
+                    fontWeight: 700,
+                    letterSpacing: "0.12em",
+                    boxShadow: "0 6px 16px rgba(0, 61, 46, 0.2)",
+                    cursor: "pointer",
+                    transition: "transform 0.3s ease, background-color 0.3s ease",
+                    width: "100%",
+                    marginTop: "8px"
+                  }}
+                >
+                  Inquire
+                </button>
+              </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       <style jsx>{`
         .nav-link {

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: "var(--brand-primary)", color: "white", padding: "80px 0 40px" }}>
       <div className="container">
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1.5fr", gap: "48px", marginBottom: "80px" }}>
+        <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1.5fr", gap: "48px", marginBottom: "80px" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "32px" }}>
               <div style={{ width: "56px", height: "56px", position: "relative" }}>
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="footer-section">
             <h4 style={{ color: "var(--brand-accent)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "24px" }}>Quick Links</h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "12px" }}>
               <li><Link href="/#philosophy" style={{ fontSize: "0.875rem", opacity: 0.8, color: "white", textDecoration: "none" }}>Our Philosophy</Link></li>
@@ -69,7 +69,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="footer-section">
             <h4 style={{ color: "var(--brand-accent)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "24px" }}>Contact</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <p style={{ fontSize: "0.875rem", opacity: 0.8 }}>
@@ -88,11 +88,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div className="footer-bottom" style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <p style={{ fontSize: "0.75rem", opacity: 0.5 }}>
             © {new Date().getFullYear()} We care. All rights reserved.
           </p>
-          <div style={{ display: "flex", gap: "24px" }}>
+          <div className="footer-links" style={{ display: "flex", gap: "24px" }}>
             {["Privacy Policy", "Terms of Service", "Accessibility"].map(item => (
               <Link key={item} href="#" style={{ fontSize: "0.75rem", opacity: 0.5, color: "white" }}>{item}</Link>
             ))}
@@ -106,14 +106,69 @@ export default function Footer() {
           color: var(--brand-accent) !important;
           transform: translateY(-2px);
         }
+        
         @media (max-width: 992px) {
-          footer > div > div:first-child {
-            grid-template-columns: 1fr 1fr;
+          .footer-grid {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 40px !important;
+          }
+          
+          .footer-section:last-child {
+            grid-column: 1 / -1;
           }
         }
-        @media (max-width: 600px) {
-          footer > div > div:first-child {
-            grid-template-columns: 1fr;
+        
+        @media (max-width: 768px) {
+          footer {
+            padding: 60px 0 32px !important;
+          }
+          
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+            gap: 48px !important;
+            margin-bottom: 60px !important;
+          }
+          
+          .footer-section:last-child {
+            grid-column: auto;
+          }
+          
+          .footer-bottom {
+            flex-direction: column !important;
+            gap: 24px !important;
+            text-align: center !important;
+            padding-top: 32px !important;
+          }
+          
+          .footer-links {
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          footer {
+            padding: 48px 0 24px !important;
+          }
+          
+          .footer-grid {
+            gap: 40px !important;
+            margin-bottom: 48px !important;
+          }
+          
+          div[style*="width: 56px"] {
+            width: 48px !important;
+            height: 48px !important;
+          }
+          
+          h4 {
+            font-size: 0.7rem !important;
+            margin-bottom: 20px !important;
+          }
+          
+          p[style*="max-width: 340px"] {
+            font-size: 0.85rem !important;
+            margin-bottom: 24px !important;
           }
         }
       `}</style>

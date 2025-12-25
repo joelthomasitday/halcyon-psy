@@ -41,14 +41,29 @@ export default function Hero() {
           <img 
             src="/assets/hero_new.png" 
             alt="Woman reaching out in a welcoming therapy space" 
+            className="hero-image hero-desktop"
             style={{ 
               width: "100%", 
               height: "100%", 
               objectFit: "cover",
+              objectPosition: "center center",
               filter: "brightness(0.85)"
             }}
           />
-          <div style={{
+          <img 
+            src="/assets/hero_mobile.jpg" 
+            alt="Woman reaching out in a welcoming therapy space" 
+            className="hero-image hero-mobile"
+            style={{ 
+              width: "100%", 
+              height: "100%", 
+              objectFit: "cover",
+              objectPosition: "center center",
+              filter: "brightness(0.85)",
+              display: "none"
+            }}
+          />
+          <div className="hero-overlay" style={{
             position: "absolute",
             inset: 0,
             background: "linear-gradient(to right, rgba(0,0,0,0.4) 0%, transparent 60%)"
@@ -113,11 +128,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="hero-buttons"
               style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}
             >
               <Link href="/inquire" style={{ textDecoration: "none" }}>
                 <button 
-                  className="btn" 
+                  className="btn btn-primary" 
                   style={{ 
                     backgroundColor: "white", 
                     color: "var(--brand-primary)",
@@ -130,7 +146,7 @@ export default function Hero() {
               </Link>
               <Link href="/#approach" style={{ textDecoration: "none" }}>
                 <button 
-                  className="btn"
+                  className="btn btn-secondary"
                   style={{ 
                     backgroundColor: "rgba(255,255,255,0.1)", 
                     color: "white",
@@ -149,18 +165,132 @@ export default function Hero() {
       </motion.div>
 
       <style jsx>{`
+        .hero-mobile {
+          display: none !important;
+        }
+        
         @media (max-width: 768px) {
+          .hero-desktop {
+            display: none !important;
+          }
+          
+          .hero-mobile {
+            display: block !important;
+          }
+          
+          section {
+            padding: 16px !important;
+            min-height: 100vh !important;
+          }
+          
+          section > div {
+            border-radius: 28px !important;
+          }
+          
+          .hero-image {
+            object-position: center center !important;
+            object-fit: cover !important;
+            height: 100% !important;
+          }
+          
+          .hero-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 70%, transparent 100%) !important;
+          }
+          
+          .container {
+            padding: 32px 24px !important;
+            padding-top: 120px !important;
+            padding-bottom: 60px !important;
+            display: flex !important;
+            align-items: flex-end !important;
+            min-height: 100% !important;
+          }
+          
+          h1 {
+            font-size: clamp(2rem, 10vw, 3rem) !important;
+            margin-bottom: 20px !important;
+          }
+          
+          h1 br {
+            display: none;
+          }
+          
+          span[style*="0.75rem"] {
+            font-size: 0.65rem !important;
+            letter-spacing: 0.2em !important;
+            margin-bottom: 12px !important;
+          }
+          
+          p {
+            font-size: clamp(0.95rem, 4vw, 1.1rem) !important;
+            margin-bottom: 32px !important;
+            line-height: 1.7 !important;
+          }
+          
+          .hero-buttons {
+            flex-direction: column !important;
+            gap: 16px !important;
+            align-items: stretch !important;
+          }
+          
+          .btn {
+            width: 100% !important;
+            padding: 14px 28px !important;
+            text-align: center !important;
+            justify-content: center !important;
+            font-size: 0.9rem !important;
+          }
+          
+          div[style*="background: linear-gradient"] {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%) !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
           section {
             padding: 12px !important;
           }
-          div[style*="border-radius: 48px"] {
-            border-radius: 24px !important;
+          
+          section > div {
+            border-radius: 20px !important;
           }
+          
+          .hero-image {
+            object-position: center center !important;
+            object-fit: cover !important;
+            height: 100% !important;
+          }
+          
+          .hero-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.35) 70%, transparent 100%) !important;
+          }
+          
           .container {
-             padding: 0 24px !important;
+            padding: 24px 20px !important;
+            padding-top: 100px !important;
+            padding-bottom: 50px !important;
+            display: flex !important;
+            align-items: flex-end !important;
+            min-height: 100% !important;
           }
+          
           h1 {
-            font-size: 3.5rem !important;
+            font-size: clamp(1.75rem, 9vw, 2.5rem) !important;
+            line-height: 1.2 !important;
+          }
+          
+          span[style*="0.75rem"] {
+            font-size: 0.6rem !important;
+          }
+          
+          p {
+            font-size: 0.9rem !important;
+            margin-bottom: 28px !important;
+          }
+          
+          .btn {
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
           }
         }
       `}</style>
