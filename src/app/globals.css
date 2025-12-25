@@ -1,16 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* Premium Palette - Bottle Green & Off-White */
-  --brand-primary: #003D2E; /* Deep Bottle Green */
-  --brand-primary-light: #005C46;
-  --brand-accent: #C2A878; /* Muted Gold for subtle accents */
-  
-  --bg-base: #FCFAF7; /* Elegant Off-White */
-  --bg-surface: #FFFFFF;
-  --bg-muted: #F3F0EB;
+  --brand-primary: #003d2e; /* Deep Bottle Green */
+  --brand-primary-light: #005c46;
+  --brand-accent: #c2a878; /* Muted Gold for subtle accents */
 
-  --text-main: #1A1C1B;
-  --text-muted: #535C58;
-  --text-on-primary: #FFFFFF;
+  --bg-base: #fcfaf7; /* Elegant Off-White */
+  --bg-surface: #ffffff;
+  --bg-muted: #f3f0eb;
+
+  --text-main: #1a1c1b;
+  --text-muted: #535c58;
+  --text-on-primary: #ffffff;
 
   --border-subtle: rgba(0, 61, 46, 0.08);
   --border-medium: rgba(0, 61, 46, 0.15);
@@ -26,8 +30,8 @@
   --space-16: 128px;
 
   /* Typography */
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Outfit', sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Outfit", sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -58,7 +62,10 @@ body {
 }
 
 /* Typography Scale */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-serif);
   font-weight: 500;
   line-height: 1.1;
@@ -84,9 +91,15 @@ p {
   font-weight: 300;
 }
 
-.text-sm { font-size: 0.875rem; }
-.text-lg { font-size: 1.25rem; }
-.text-serif { font-family: var(--font-serif); }
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-lg {
+  font-size: 1.25rem;
+}
+.text-serif {
+  font-family: var(--font-serif);
+}
 
 .container {
   max-width: 1280px;

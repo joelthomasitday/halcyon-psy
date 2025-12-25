@@ -130,7 +130,7 @@ export default function InquirePage() {
             <ContactCard 
               icon={<Mail size={24} />}
               title="Send an email"
-              value="care@halcyonpsy.com"
+              value="bayulageorge@gmail.com"
               desc="For detailed requests and corporate wellness programs."
             />
             <ContactCard 
