@@ -85,7 +85,7 @@ export default function Navbar() {
           {["Services", "Approach", "Philosophy"].map((item) => (
             <Link 
               key={item} 
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              href={`/#${item.toLowerCase().replace(" ", "-")}`}
               className="nav-link"
               style={{
                 fontSize: "0.72rem",
@@ -102,25 +102,27 @@ export default function Navbar() {
         </div>
 
         <div style={{ display: "flex", justifyContent: "flex-end", flex: "1 1 0%" }}>
-          <button 
-            className="btn" 
-            style={{ 
-              padding: "10px 28px", 
-              borderRadius: "100px",
-              fontSize: "0.7rem",
-              backgroundColor: "var(--brand-primary)",
-              color: "white",
-              border: "none",
-              textTransform: "uppercase",
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              boxShadow: "0 6px 16px rgba(0, 61, 46, 0.2)",
-              cursor: "pointer",
-              transition: "transform 0.3s ease, background-color 0.3s ease"
-            }}
-          >
-            Inquire
-          </button>
+          <Link href="/inquire" style={{ textDecoration: "none" }}>
+            <button 
+              className="btn" 
+              style={{ 
+                padding: "10px 28px", 
+                borderRadius: "100px",
+                fontSize: "0.7rem",
+                backgroundColor: "var(--brand-primary)",
+                color: "white",
+                border: "none",
+                textTransform: "uppercase",
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                boxShadow: "0 6px 16px rgba(0, 61, 46, 0.2)",
+                cursor: "pointer",
+                transition: "transform 0.3s ease, background-color 0.3s ease"
+              }}
+            >
+              Inquire
+            </button>
+          </Link>
         </div>
       </motion.nav>
 

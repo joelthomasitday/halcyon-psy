@@ -8,86 +8,90 @@ const services = [
     title: "Professional Counselling",
     subtitle: "Personalized Support",
     description: "Personalized sessions addressing emotional, behavioral, and psychological concerns.",
-    image: "/service-1.png",
-    category: "Individuals"
+    image: "/services/professional-counselling.png",
+    category: "Individuals",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Professional%20Counselling."
   },
   {
     title: "Cognitive Behavioral Therapy (CBT)",
     subtitle: "Evidence-Based",
     description: "Structured therapy to identify and reshape unhelpful thoughts and behaviors.",
-    image: "/service-2.png",
-    category: "Therapy"
+    image: "/services/cbt.png",
+    category: "Therapy",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99m%20interested%20in%20Cognitive%20Behavioral%20Therapy."
   },
   {
     title: "Family Therapy",
     subtitle: "Relationship Wellness",
     description: "Strengthening relationships and improving communication within families.",
-    image: "/service-3.png",
-    category: "Families"
+    image: "/services/family-therapy.png",
+    category: "Families",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20Family%20Therapy."
   },
   {
     title: "Group Therapy",
     subtitle: "Collective Healing",
     description: "Shared therapeutic environments for mutual learning and support.",
-    image: "/service-4.png",
-    category: "Groups"
+    image: "/services/group-therapy.png",
+    category: "Groups",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99m%20interested%20in%20Group%20Therapy."
   },
   {
-    title: "Home Counseling",
+    title: "Digital Wellness Support",
     subtitle: "Accessible Care",
-    description: "Therapy delivered in the comfort of your home when required.",
-    image: "/service-5.png",
-    category: "At Home"
+    description: "Personalized psychological support delivered through secure digital platforms.",
+    image: "/services/digital-wellness.png",
+    category: "Online",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Digital%20Wellness%20Support."
   },
   {
     title: "Mindfulness Therapy",
     subtitle: "Presence & Awareness",
     description: "Developing awareness, regulation, and emotional balance.",
-    image: "/service-1.png",
-    category: "Wellness"
+    image: "/services/mindfulness-therapy.png",
+    category: "Wellness",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99m%20interested%20in%20Mindfulness%20Therapy."
   },
   {
-    title: "Neurofeedback",
+    title: "Neurofeedback Therapy",
     subtitle: "Brain-Based Training",
     description: "Brain-based training to support emotional and cognitive regulation.",
-    image: "/service-2.png",
-    category: "Scientific"
+    image: "/services/neurofeedback-therapy.png",
+    category: "Scientific",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Neurofeedback%20Therapy."
   },
   {
     title: "Online Counselling",
     subtitle: "Virtual Care",
     description: "Confidential therapy sessions conducted virtually.",
-    image: "/service-3.png",
-    category: "Digital"
-  },
-  {
-    title: "Psychotherapy",
-    subtitle: "In-depth Support",
-    description: "In-depth therapeutic support for long-term emotional wellbeing.",
-    image: "/service-4.png",
-    category: "Individuals"
+    image: "/services/digital-wellness.png",
+    category: "Digital",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99d%20like%20to%20book%20an%20Online%20Counselling%20session."
   },
   {
     title: "Psychometric Testing",
     subtitle: "Scientific Assessment",
     description: "Scientific assessments to understand cognitive and emotional functioning.",
-    image: "/service-5.png",
-    category: "Assessment"
+    image: "/services/cbt.png",
+    category: "Assessment",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99d%20like%20information%20about%20Psychometric%20Testing."
   },
   {
     title: "RTMS Therapy",
     subtitle: "Advanced Treatment",
     description: "Advanced, non-invasive brain stimulation for treatment-resistant conditions.",
-    image: "/service-1.png",
-    category: "Advanced"
+    image: "/services/rtms-therapy.png",
+    category: "Advanced",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%20want%20to%20know%20more%20about%20RTMS%20Therapy."
   },
   {
     title: "School Wellness Programs",
     subtitle: "Educational Support",
     description: "Emotional and behavioral wellness programs designed for school environments.",
-    image: "/service-2.png",
-    category: "Schools"
-  },
+    image: "/services/school-wellness.png",
+    category: "Schools",
+    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99m%20interested%20in%20School%20Wellness%20Programs."
+  }
 ];
 
 export default function Services() {
@@ -153,7 +157,7 @@ export default function Services() {
                   {service.description}
                 </p>
                 <div className="card-footer">
-                  <LinkArrow />
+                  <LinkArrow href={service.whatsappLink} />
                 </div>
               </div>
             </motion.div>
@@ -281,6 +285,7 @@ export default function Services() {
           padding: 0;
           font: inherit;
           transition: var(--transition-smooth);
+          text-decoration: none;
         }
 
         :global(.link-arrow-btn:hover) {
@@ -292,14 +297,14 @@ export default function Services() {
   );
 }
 
-function LinkArrow() {
+function LinkArrow({ href }: { href: string }) {
   return (
-    <button className="link-arrow-btn" aria-label="Learn more about this service">
+    <a href={href} className="link-arrow-btn" aria-label="Learn more about this service" target="_blank" rel="noopener noreferrer">
       <span style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.15em" }}>Explore</span>
       <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 1L23 6L18 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M1 6H23" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
-    </button>
+    </a>
   );
 }

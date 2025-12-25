@@ -15,7 +15,7 @@ const conditions = [
 
 export default function PatientCare() {
   return (
-    <section id="patient-care" className="section-padding" style={{ backgroundColor: "var(--bg-base)" }}>
+    <section id="approach" className="section-padding" style={{ backgroundColor: "var(--bg-base)" }}>
       <div className="container">
         <div style={{ marginBottom: "60px", textAlign: "center" }}>
           <motion.span 

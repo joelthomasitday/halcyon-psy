@@ -26,7 +26,7 @@ export default function Footer() {
             <div style={{ display: "flex", gap: "24px" }}>
               <a href="#" style={{ color: "white", opacity: 0.7, transition: "0.3s" }} className="social-link" aria-label="Instagram"><Instagram size={18} /></a>
               <a href="#" style={{ color: "white", opacity: 0.7, transition: "0.3s" }} className="social-link" aria-label="Facebook"><Facebook size={18} /></a>
-              <a href="#" style={{ color: "white", opacity: 0.7, transition: "0.3s" }} className="social-link" aria-label="WhatsApp">
+              <a href="https://wa.me/919946702704" target="_blank" rel="noopener noreferrer" style={{ color: "white", opacity: 0.7, transition: "0.3s" }} className="social-link" aria-label="WhatsApp">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 4l-1.5 6.5Z"/>
                 </svg>
@@ -38,9 +38,10 @@ export default function Footer() {
           <div>
             <h4 style={{ color: "var(--brand-accent)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "24px" }}>Quick Links</h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "12px" }}>
-              {["Our Philosophy", "Specialized Services", "Patient Care", "Contact Us"].map(item => (
-                <li key={item}><Link href="#" style={{ fontSize: "0.875rem", opacity: 0.8, color: "white" }}>{item}</Link></li>
-              ))}
+              <li><Link href="/#philosophy" style={{ fontSize: "0.875rem", opacity: 0.8, color: "white", textDecoration: "none" }}>Our Philosophy</Link></li>
+              <li><Link href="/#services" style={{ fontSize: "0.875rem", opacity: 0.8, color: "white", textDecoration: "none" }}>Specialized Services</Link></li>
+              <li><Link href="/#approach" style={{ fontSize: "0.875rem", opacity: 0.8, color: "white", textDecoration: "none" }}>Patient Care</Link></li>
+              <li><Link href="/inquire" style={{ fontSize: "0.875rem", opacity: 0.8, color: "white", textDecoration: "none" }}>Inquire</Link></li>
             </ul>
           </div>
 
@@ -49,7 +50,7 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <p style={{ fontSize: "0.875rem", opacity: 0.8 }}>
                 <strong>Email:</strong><br />
-                hello@halcyonpsy.com
+                care@halcyonpsy.com
               </p>
               <p style={{ fontSize: "0.875rem", opacity: 0.8 }}>
                 <strong>Support:</strong><br />
@@ -57,7 +58,7 @@ export default function Footer() {
               </p>
               <p style={{ fontSize: "0.875rem", opacity: 0.8 }}>
                 <strong>Location:</strong><br />
-                Online & In-person sessions available.
+                Completely Online Psychological Services.
               </p>
             </div>
           </div>

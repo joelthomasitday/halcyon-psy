@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -77,7 +78,7 @@ export default function Hero() {
                 display: "block",
                 marginBottom: "16px"
               }}>
-                Psychology & Wellness Center
+                Online Psychological Services
               </span>
               <h1 style={{ 
                 marginBottom: "24px", 
@@ -112,32 +113,36 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              style={{ display: "flex", gap: "24px" }}
+              style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}
             >
-              <button 
-                className="btn" 
-                style={{ 
-                  backgroundColor: "white", 
-                  color: "var(--brand-primary)",
-                  borderRadius: "100px",
-                  padding: "16px 32px"
-                }}
-              >
-                Book a Free 15-Minute Consultation
-              </button>
-              <button 
-                className="btn"
-                style={{ 
-                  backgroundColor: "rgba(255,255,255,0.1)", 
-                  color: "white",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255,255,255,0.3)",
-                  borderRadius: "100px",
-                  padding: "16px 32px"
-                }}
-              >
-                Our Approach
-              </button>
+              <Link href="/inquire" style={{ textDecoration: "none" }}>
+                <button 
+                  className="btn" 
+                  style={{ 
+                    backgroundColor: "white", 
+                    color: "var(--brand-primary)",
+                    borderRadius: "100px",
+                    padding: "16px 32px"
+                  }}
+                >
+                  Book a Consultation
+                </button>
+              </Link>
+              <Link href="/#approach" style={{ textDecoration: "none" }}>
+                <button 
+                  className="btn"
+                  style={{ 
+                    backgroundColor: "rgba(255,255,255,0.1)", 
+                    color: "white",
+                    backdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    borderRadius: "100px",
+                    padding: "16px 32px"
+                  }}
+                >
+                  Our Approach
+                </button>
+              </Link>
             </motion.div>
           </div>
         </div>
