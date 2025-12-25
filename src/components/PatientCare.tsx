@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const conditions = [
-  "Addiction", "Adjustment Disorders", "Psychiatry", "Clinical Psychology", 
+  "Addiction", "Adjustment Disorders","Clinical Psychology", 
   "Alcoholism", "Alzheimer’s Disease", "Anxiety Disorders", "Autism Spectrum Disorder", 
   "Bipolar Disorder", "Child Psychology", "Chronic Pain", "Dementia", 
   "Depression", "Drug Addiction", "Couples & Relationship Counseling", 

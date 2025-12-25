@@ -13,15 +13,15 @@ export default function DeafSupport({ embedded = false }: DeafSupportProps) {
 
   const services = [
     {
-      title: "Sign Language Counselling",
+      title: "Counselling in Sign Language",
       description: "Therapy sessions conducted directly in sign language to ensure clear understanding and emotional safety."
     },
     {
-      title: "Sign Language Psychotherapy",
+      title: "Psychotherapy in Sign Language",
       description: "Professional psychotherapy delivered through sign language, supporting mental and emotional well-being."
     },
     {
-      title: "Sign Language for Children & Adolescents",
+      title: "Support for Children & Adolescents",
       description: "Developmental and emotional support using age-appropriate sign language communication."
     },
     {
@@ -104,7 +104,7 @@ export default function DeafSupport({ embedded = false }: DeafSupportProps) {
           <div className="button-group">
              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
                 <button className="btn-primary">
-                  Book a Sign Language Session
+                  Book a session in sign language
                 </button>
              </a>
              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>

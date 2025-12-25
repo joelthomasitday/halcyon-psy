@@ -79,14 +79,6 @@ const services = [
     whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%E2%80%99d%20like%20information%20about%20Psychometric%20Testing."
   },
   {
-    title: "RTMS Therapy",
-    subtitle: "Advanced Treatment",
-    description: "Advanced, non-invasive brain stimulation for treatment-resistant conditions.",
-    image: "/services/rtms-therapy.png",
-    category: "Advanced",
-    whatsappLink: "https://wa.me/919946702704?text=Hello%2C%20I%20want%20to%20know%20more%20about%20RTMS%20Therapy."
-  },
-  {
     title: "School Wellness Programs",
     subtitle: "Educational Support",
     description: "Emotional and behavioral wellness programs designed for school environments.",
