@@ -89,7 +89,7 @@ export default function Navbar() {
                 opacity: 0.8,
                 marginTop: "2px"
               }}>
-                We care psychological services
+                Psychological services
               </span>
             </div>
           </div>
